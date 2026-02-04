@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import HomePage from './Components/HomePage/HomePage'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <Routes>
-      <Route/>
+      <Route path="/" element={<HomePage/>} />
     </Routes>
   )
 }

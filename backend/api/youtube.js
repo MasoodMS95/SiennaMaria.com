@@ -7,10 +7,7 @@ const API_KEY = process.env.API_KEY;
 
 router.get('/latest', async (req, res) => {
     await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCv6v8RgrQYdBN1EYXvPw5UA&order=date&type=video&maxResults=1&key=${API_KEY}`, {
-        method: 'GET',
-        headers: {
-                "Content-Type": "application/json",
-            }
+        method: 'GET'
     })
     .then(async (fetchedResponse) => {
         let parsedResponse = await fetchedResponse.json();

@@ -1,21 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from 'react'
+import './HomePage.css'
+import LatestVideoPlayer from './LatestVideoOnYoutube/LatestVideoPlayer'
 
 export default function HomePage(){
-    const [latestVideo, setLatestVideo] = useState(null);
-    const [isLatestVideoLoaded, setisLatestVideoLoaded] = useState(false);
-    
-
-    useEffect(()=>{
-        
-    }, []);
-
     return (
         <React.Fragment>
-            {isLatestVideoLoaded &&
-                <div>
-                    TEST
-                </div>
-            }
+            <LatestVideoPlayer/>
         </React.Fragment>
     )
 }

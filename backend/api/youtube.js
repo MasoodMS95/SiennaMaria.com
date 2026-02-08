@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const dotenv = require('dotenv');
-const { json } = require('express');
 
 dotenv.config();
 const API_KEY = process.env.API_KEY;
@@ -12,7 +11,7 @@ router.get('/latest', async (req, res) => {
     .then(async (fetchedResponse) => {
         let parsedResponse = await fetchedResponse.json();
         if(fetchedResponse.ok){
-            res.status(200).json({videoID:`${parsedResponse.items[0].id.videoId}`})
+            res.status(200).json({videoID:`${parsedResponse.items[0].id.videoId}`, title:`${parsedResponse.items[0].snippet.title}`})
         }
         else{
             if(parsedResponse.error){

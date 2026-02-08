@@ -1,11 +1,32 @@
+#root {
+    min-height: 96vh;
+}
+
 body{
   box-sizing: border-box;
-  background-color: rgb(255, 219, 241);
+  background-color: rgb(224,180,179);
+  margin: 0px;
 }
 
 footer{
-  display:flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  background-color: black;
+  border-top: solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.socials-box{
+  display: flex;
+  column-gap: 15px;
+}
+
+.footer-text{
+  color: white;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  text-shadow: 1px 1px 2px pink;
 }

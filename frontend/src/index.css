@@ -12,9 +12,8 @@ footer{
   align-items: center;
   background-color: black;
   border-top: solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   padding: 5px 20px;
   text-align: center;
 }
@@ -22,6 +21,10 @@ footer{
 .socials-box{
   display: flex;
   column-gap: 15px;
+}
+
+.copyright-box{
+  justify-self: flex-end;
 }
 
 .footer-text{

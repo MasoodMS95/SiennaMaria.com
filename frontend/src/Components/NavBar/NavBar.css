@@ -1,20 +1,50 @@
-.nav-bar{
+/* .nav-bar{
     align-items: center;
     background-image: url('../../assets/sienna_banner.png');
     display: flex;
-    justify-content: space-evenly;
-    padding: 20px 0;
+    justify-content: center;
+    padding: 0;
     margin-bottom: 10px;
+} */
+
+.hero-banner{
+    width: 100%;
+    height: auto;
 }
 
-.nav-button:hover:{
-    cursor: pointer;
-}
-
-.nav-bar li{
+.nav-bar{
+    align-items: center;
+    background-color: rgb(141, 159, 137);
+    /* border: solid black 8px;
+    border-radius: 15px; */
+    box-shadow: 0 6px 18px rgba(44, 52, 42, 0.473);
+    display: flex;
+    justify-content: space-evenly;
     list-style-type: none;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    padding: 0;
+    width: 100%;
 }
 
 .nav-button{
+    color: rgb(44, 52, 42);
     font-size: 40px;
+    font-family: "Delius Swash Caps", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-button:hover{
+    /* border-left: solid black 8px;
+    border-right: solid black 8px; */
+    color: rgb(255, 250, 247);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px){
+    .nav-button{
+        font-size: 20px;
+    }
 }

@@ -35,7 +35,7 @@ export default function LatestVideoPlayer(){
     if(!error){
         return (
             <div className='latest-youtube-video'>
-                <iframe width="680" height="383" src={`https://www.youtube.com/embed/${latestVideo}?vq=hd1080`} title={`${title}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="680" height="383" src={`https://www.youtube.com/embed/${latestVideo}?vq=hd1080`} title={`${title}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
         )
     }

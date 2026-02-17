@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import NavBar from './Components/NavBar/NavBar'
 import HomePage from './Components/HomePage/HomePage'
-
+import LinkTree from './Components/LinkTree/LinkTree'
 
 import './App.css'
 
@@ -13,7 +13,7 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="/socials" />
+        <Route path="/socials" element={<LinkTree/>}/>
       </Routes>
     </React.Fragment>
   )

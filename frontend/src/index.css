@@ -16,7 +16,13 @@ body{
 #root{
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+}
+
+.standard-font{
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 footer{

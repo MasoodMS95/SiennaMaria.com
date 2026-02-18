@@ -9,8 +9,8 @@ export default function NavBar(){
 
     return (
         <React.Fragment>
-            <img className='hero-banner' src={image} />
-            <ul className='nav-bar'>
+            <img className='hero-banner' src={image}  alt='SiennaMaria.com'/>
+            <ul className='nav-bar standard-font'>
                 <li onClick={()=>navigate("/")}
                     className="home-nav-button nav-button">
                     <i id="home-image" className="fa-solid fa-house"></i>

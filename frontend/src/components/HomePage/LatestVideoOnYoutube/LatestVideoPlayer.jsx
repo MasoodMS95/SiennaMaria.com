@@ -5,7 +5,6 @@ export default function LatestVideoPlayer(){
     let [latestVideo, setLatestVideo] = useState(null);
     let [title, setTitle] = useState("");
     let [error, setError] = useState(false);
-    let youtubeChannelURL = `https://www.youtube.com/@siennamaria`
 
     async function fetchVideo(){
         try{

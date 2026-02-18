@@ -8,8 +8,10 @@
 } */
 
 .hero-banner{
-    width: 100%;
+    width: 540px;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 10px;
 }
 
@@ -30,10 +32,7 @@
 
 .nav-button{
     color: rgb(44, 52, 42);
-    font-size: 40px;
-    font-family: "Delius Swash Caps", cursive;
-    font-weight: 400;
-    font-style: normal;
+    font-size: 35px;
 }
 
 .nav-button:hover{
@@ -45,6 +44,14 @@
 }
 
 @media screen and (max-width: 828px){
+    .hero-banner{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
     .nav-button{
         font-size: 20px;
         padding: 0;

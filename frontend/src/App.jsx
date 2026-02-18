@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import NavBar from './Components/NavBar/NavBar'
-import HomePage from './Components/HomePage/HomePage'
-import LinkTree from './Components/LinkTree/LinkTree'
+import NavBar from './components/NavBar/NavBar'
+import HomePage from './components/HomePage/HomePage'
+import LinkTree from './components/LinkTree/LinkTree'
 
 import './App.css'
 

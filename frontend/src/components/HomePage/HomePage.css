@@ -1,0 +1,11 @@
+.home-title{
+    margin: 0 auto;
+}
+
+.redirect{
+    color: blue;
+    text-decoration: underline;
+}
+.redirect:hover{
+    cursor: pointer;
+}

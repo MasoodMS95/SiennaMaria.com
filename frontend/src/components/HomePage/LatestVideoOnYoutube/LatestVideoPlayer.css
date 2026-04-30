@@ -2,3 +2,15 @@
     display:flex;
     justify-content: center;
 }
+
+.video-player{
+    width: 680px;
+    height: 383px;
+}
+
+@media screen and (max-width: 828px){
+    .video-player{
+        width: 340px;
+        height: 192px;
+    }
+}

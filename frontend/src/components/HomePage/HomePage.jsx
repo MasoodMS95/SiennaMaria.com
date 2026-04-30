@@ -8,8 +8,8 @@ export default function HomePage(){
     return (
         <React.Fragment>
             <h2 className='home-title standard-font'>Latest Video</h2>
-            {/* <LatestVideoPlayer/> */}
-            <h2>Follow me on my <span onClick={()=>navigate('/socials')} className='redirect'>Socials!</span></h2>
+            <LatestVideoPlayer/>
+            <h2 className='standard-font'>Follow me on my <span onClick={()=>navigate('/socials')} className='redirect'>Socials!</span></h2>
         </React.Fragment>
     )
 }

@@ -11,9 +11,9 @@ export default function LatestVideoPlayer(){
             let videoRequest = await fetch('/api/youtube/latest', {
                 method: 'GET'
             })
-            let parsedVideoRequest = await videoRequest.json();
             if(videoRequest.ok){
-                setLatestVideo(parsedVideoRequest['videoID'])
+                let parsedVideoRequest = await videoRequest.json();
+                setLatestVideo(parsedVideoRequest['videoId'])
                 setTitle(parsedVideoRequest['title']);
             }
             else{
@@ -34,7 +34,7 @@ export default function LatestVideoPlayer(){
     if(!error){
         return (
             <div className='latest-youtube-video'>
-                <iframe width="680" height="383" src={`https://www.youtube.com/embed/${latestVideo}?vq=hd1080`} title={`${title}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <iframe className="video-player" src={`https://www.youtube.com/embed/${latestVideo}?vq=hd1080`} title={`${title}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
         )
     }

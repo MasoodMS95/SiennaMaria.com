@@ -6,6 +6,8 @@ export default function LatestVideoPlayer(){
     let [title, setTitle] = useState("");
     let [error, setError] = useState(false);
 
+    const defaultVideo = "Eta4IxPfxME"
+
     async function fetchVideo(){
         try{
             let videoRequest = await fetch('/api/youtube/latest', {
@@ -30,12 +32,10 @@ export default function LatestVideoPlayer(){
     useEffect(()=>{
         fetchVideo();
     }, [])
-
-    if(!error){
-        return (
-            <div className='latest-youtube-video'>
-                <iframe className="video-player" src={`https://www.youtube.com/embed/${latestVideo}?vq=hd1080`} title={`${title}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-            </div>
-        )
-    }
+    
+    return (
+        <div className='latest-youtube-video'>
+            <iframe className="video-player" src={`https://www.youtube.com/embed/${error?defaultVideo:latestVideo}?vq=hd1080`} title={`${title}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        </div>
+    )
 }

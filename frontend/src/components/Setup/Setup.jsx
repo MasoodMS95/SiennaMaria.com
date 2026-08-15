@@ -1,32 +1,27 @@
 import React from "react";
-import pcImage from "../../assets/pc_1.png"
+import ImageCarousel from "./ImageCarousel/ImageCarousel"
 import "./Setup.css"
 
-export default function Setup(){
+export default function Setup() {
     const specs = {
-        "Processor": "11900K",
-        "GPU": "RTX 5080",
-        "Memory": "something"
+        "Motherboard": "ASUS Z590-P",
+        "Processor": "Intel i9 11900K",
+        "GPU": "MSI Gaming Trio RTX 5080",
+        "Memory": "64GB 3200MHz Corsair Vengeance",
+        "PSU": "Super Flower Leadex VII XG 1300W",
+        "Case": "Hyte Y60"
     }
-    return(
-        <React.Fragment>
-            <div className="setup-photos">
-                <div className="photo-row" id="photo-row-1">
-                    <img className="pc-image pc-image-1" src={pcImage}/>
-                    <span className="standard-font">
-                        My Setup:
-                        <ul className="setup-list">
-                            {Object.keys(specs).map((part) => (
-                              
-                                <li key={part}>{part}: {specs[part]}</li>
-                              
-                            ))}
-                        </ul>
-                    </span>
-                </div>
-                <div className="photo-row" id="photo-row-2">
 
-                </div>
+    return (
+        <React.Fragment>
+            <ImageCarousel/>
+            <div className="standard-font setup-list-container">
+                <h3 className="setup-header">My Setup:</h3>
+                <ul className="setup-list">
+                    {Object.keys(specs).map((part) => (
+                        <li key={part}><span className="pc-part">{part}</span>: {specs[part]}</li>
+                    ))}
+                </ul>
             </div>
         </React.Fragment>
     )

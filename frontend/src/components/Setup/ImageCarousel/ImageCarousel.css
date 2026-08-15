@@ -1,0 +1,92 @@
+.image-carousel {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-images {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.pc-image {
+    border: solid 2px black;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(44, 52, 42, 0.473);
+    object-fit: cover;
+    object-position: center center;
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+.current-image {
+    height: 400px;
+    opacity: 1;
+    transform: scale(1);
+    width: 400px;
+}
+
+.side-image {
+    height: 320px;
+    opacity: 0.35;
+    transform: scale(0.9);
+    width: 320px;
+}
+
+.photo-button {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.5rem;
+    height: 44px;
+    justify-content: center;
+    opacity: 0.8;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition:
+        background-color 0.3s ease,
+        opacity 0.3s ease;
+    width: 44px;
+    z-index: 2;
+}
+
+.prev-photo-button {
+    left: 1rem;
+}
+
+.next-photo-button {
+    right: 1rem;
+}
+
+.photo-button:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+}
+
+@media screen and (max-width: 828px) {
+    .current-image {
+        height: 250px;
+        width: 250px;
+    }
+
+    .side-image {
+        height: 180px;
+        width: 180px;
+    }
+
+    .carousel-images {
+        gap: 10px;
+    }
+}

@@ -8,11 +8,11 @@
 } */
 
 .hero-banner{
-    width: 540px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    width: 540px;
 }
 
 .nav-bar{
@@ -26,7 +26,7 @@
     list-style-type: none;
     margin-bottom: 10px;
     margin-top: 0px;
-    padding: 5px 0;
+    padding: 5px 0px;
     width: 100%;
 }
 
@@ -40,7 +40,13 @@
     border-right: solid black 8px; */
     color: rgb(255, 250, 247);
     cursor: pointer;
+    font-weight: bold;
     text-decoration: underline;
+}
+
+/* Adding spacing between Video icon and links. */
+.fa-video{
+    margin-right: 5px;
 }
 
 @media screen and (max-width: 828px){

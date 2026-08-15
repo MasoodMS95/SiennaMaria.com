@@ -6,7 +6,6 @@
 
 body{
   background-color: rgb(224,180,179);
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   margin: 0px;

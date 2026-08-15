@@ -1,0 +1,38 @@
+.setup-photos{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-row{
+    display: flex;
+    column-gap: 10px;
+}
+
+.pc-image{
+    border: solid 2px black;
+    box-shadow: 0 6px 18px rgba(44, 52, 42, 0.473);
+    border-radius: 8px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center center;
+    width: 400px;
+}
+
+.setup-list{
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+@media screen and (max-width: 828px){
+    .pc-image{
+        height: 100px;
+        width: 100px;
+    }
+
+    .setup-list{
+        font-size: 12px;
+    }
+    
+}

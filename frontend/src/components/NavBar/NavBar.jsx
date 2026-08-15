@@ -18,12 +18,13 @@ export default function NavBar(){
                 </li>
                 <li onClick={()=>navigate("/socials")}
                     className="link-tree-nav-button nav-button">
-                    <i className="fa-solid fa-house"></i>
+                    <i className="fa-solid fa-video"></i>
                     <span>Links</span>
                 </li>
-                <li className="home-nav-button nav-button last-item">
-                    <i className="fa-solid fa-house"></i>
-                    <span>Home</span>
+                <li onClick={()=>navigate("/setup")}
+                    className="setup-nav-button nav-button last-item">
+                    <i className="fa-solid fa-computer"></i>
+                    <span>Setup</span>
                 </li>
             </ul>
         </React.Fragment>

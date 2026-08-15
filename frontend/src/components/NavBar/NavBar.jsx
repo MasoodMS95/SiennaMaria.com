@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.css'
 import { useNavigate  } from 'react-router-dom';
-import image from '../../assets/sienna_banner.png'
+import image from '../../assets/images/sienna_banner.png'
 
 export default function NavBar(){
 

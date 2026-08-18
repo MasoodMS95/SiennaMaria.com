@@ -4,27 +4,43 @@
   box-sizing: border-box;
 }
 
-body{
-  background-color: rgb(224,180,179);
+body {
+  background-color: rgb(224, 180, 179);
+  background-image:
+    url("./assets/images/cloud_sticker.png"),
+    url("./assets/images/cloud_sticker.png");
+
+  background-repeat:
+    repeat,
+    repeat;
+
+  background-size:
+    500px 400px,
+    500px 400px;
+
+  background-position:
+    0 0,
+    250px 200px;
+  background-blend-mode: soft-light;
   display: flex;
   flex-direction: column;
   margin: 0px;
   min-height: 100vh;
 }
 
-#root{
+#root {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.standard-font{
+.standard-font {
   font-family: "Delius Swash Caps", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
-footer{
+footer {
   align-items: center;
   background-color: black;
   border-top: solid black;
@@ -35,32 +51,32 @@ footer{
   text-align: center;
 }
 
-.socials-box{
+.socials-box {
   display: flex;
   column-gap: 15px;
 }
 
-.last-item{
+.last-item {
   justify-self: flex-end;
 }
 
-.footer-text{
+.footer-text {
   color: white;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
   text-shadow: 1px 1px 2px pink;
 }
 
-@media screen and (max-width: 828px){
-    footer{
-      align-items: center;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+@media screen and (max-width: 828px) {
+  footer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    .footer-text{
-        font-size: 10px;
-        text-wrap: nowrap;
-    }
+  .footer-text {
+    font-size: 10px;
+    text-wrap: nowrap;
+  }
 }

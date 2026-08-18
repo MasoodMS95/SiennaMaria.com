@@ -11,6 +11,7 @@ const port = process.env.PORT || 3000;
 app.use(cors({
     origin: [
         "http://localhost:5173",
+        "http://localhost:4173",
         "https://siennamaria.com",
         "https://www.siennamaria.com",
     ]
@@ -22,11 +23,6 @@ app.get('/api', (req, res) => {
     res.status(400).json({
         error: 'No api route defined'
     })
-})
-
-app.get('/test', (req, res) => {
-    console.log(`Test Value: ${port}`);
-    res.send(`Test Value: ${port}`);
 })
 
 app.all('{*splat}', (req, res) => {

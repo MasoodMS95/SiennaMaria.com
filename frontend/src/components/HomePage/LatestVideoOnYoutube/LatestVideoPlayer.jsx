@@ -6,11 +6,13 @@ export default function LatestVideoPlayer(){
     let [title, setTitle] = useState("");
     let [error, setError] = useState(false);
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
     const defaultVideo = "Eta4IxPfxME"
 
     async function fetchVideo(){
         try{
-            let videoRequest = await fetch('/api/youtube/latest', {
+            let videoRequest = await fetch(`${API_URL}/api/youtube/latest`, {
                 method: 'GET'
             })
             if(videoRequest.ok){

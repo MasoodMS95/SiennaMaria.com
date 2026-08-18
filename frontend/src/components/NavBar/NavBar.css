@@ -17,7 +17,7 @@
 
 .nav-bar{
     align-items: center;
-    background-color: rgb(141, 159, 137);
+    background-color: rgba(255, 255, 255, 0.65);
     /* border: solid black 8px;
     border-radius: 15px; */
     box-shadow: 0 6px 18px rgba(44, 52, 42, 0.473);
@@ -38,7 +38,7 @@
 .nav-button:hover{
     /* border-left: solid black 8px;
     border-right: solid black 8px; */
-    color: rgb(255, 250, 247);
+    color: rgb(224, 180, 179);
     cursor: pointer;
     font-weight: bold;
     text-decoration: underline;
@@ -53,8 +53,6 @@
     .hero-banner{
         width: 100%;
         height: auto;
-        margin-left: auto;
-        margin-right: auto;
         margin-bottom: 10px;
     }
 

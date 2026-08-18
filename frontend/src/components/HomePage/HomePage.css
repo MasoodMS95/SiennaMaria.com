@@ -1,11 +1,96 @@
-.home-title{
-    margin: 0 auto;
+.hompage-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-.redirect{
+.latest-video-box,
+.about-me-box {
+    width: 680px;
+    max-width: calc(100% - 40px);
+}
+
+.latest-video-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-title {
+    margin: 0;
+}
+
+.about-me-box {
+    margin-top: 5px;
+}
+
+.about-me-header {
+    margin-top: 1px;
+    margin-bottom: 0;
+}
+
+.about-me-content-box {
+    box-sizing: border-box;
+    width: 100%;
+
+    padding: 10px 20px;
+
+    border: solid 1px black;
+    border-radius: 20px;
+
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.about-me-content {
+    margin: 0;
+    width: 100%;
+    text-indent: 2em;
+    white-space: pre-wrap;
+}
+
+.about-me-content,
+.about-me-quote {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.about-me-quote {
+    margin: 10px 2rem;
+    padding: 0;
+    width: auto;
+    white-space: normal;
+}
+
+.redirect {
     color: blue;
     text-decoration: underline;
 }
-.redirect:hover{
+
+.redirect:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 828px) {
+
+    .latest-video-box,
+    .about-me-box {
+        width: calc(100% - 20px);
+    }
+
+    .about-me-content-box {
+        padding: 10px 15px;
+    }
+
+    .about-me-content,
+    .about-me-quote {
+        font-size: 12px;
+    }
+
+    .about-me-quote {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }

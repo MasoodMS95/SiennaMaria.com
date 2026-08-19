@@ -1,28 +1,36 @@
 import React from "react";
-import ImageCarousel from "./ImageCarousel/ImageCarousel"
-import "./Setup.css"
+import ImageCarousel from "./ImageCarousel/ImageCarousel";
+import "./Setup.css";
 
 export default function Setup() {
-    const specs = {
-        "Motherboard": "ASUS Z590-P",
-        "Processor": "Intel i9 11900K",
-        "GPU": "MSI Gaming Trio RTX 5080",
-        "Memory": "64GB Corsair Vengeance",
-        "PSU": "Super Flower Leadex VII XG 1300W",
-        "Case": "Hyte Y60"
-    }
-
     return (
         <React.Fragment>
-            <ImageCarousel/>
+            <ImageCarousel />
+
             <div className="standard-font setup-list-container">
                 <h3 className="setup-header">My Setup:</h3>
+
                 <ul className="setup-list">
-                    {Object.keys(specs).map((part) => (
-                        <li key={part}><span className="pc-part">{part}</span>: {specs[part]}</li>
-                    ))}
+                    <li className="setup-left">
+                        <span className="pc-part">Motherboard</span>: ASUS Z590-P
+                    </li>
+                    <li className="setup-center">
+                        <span className="pc-part">Processor</span>: Intel i9 11900K
+                    </li>
+                    <li className="setup-right">
+                        <span className="pc-part">GPU</span>: MSI Gaming Trio RTX 5080
+                    </li>
+                    <li className="setup-left">
+                        <span className="pc-part">Memory</span>: 64GB Corsair Vengeance
+                    </li>
+                    <li className="setup-center">
+                        <span className="pc-part">Case</span>: Hyte Y60
+                    </li>
+                    <li className="setup-right">
+                        <span className="pc-part">PSU</span>: Super Flower Leadex VII XG 1300W
+                    </li>
                 </ul>
             </div>
         </React.Fragment>
-    )
+    );
 }

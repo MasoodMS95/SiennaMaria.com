@@ -2,10 +2,11 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin: 30px auto 0;
     overflow: hidden;
     position: relative;
-    width: 100%;
+    width: fit-content;
+    max-width: 100%;
 }
 
 .carousel-images {
@@ -42,7 +43,7 @@
 
 .photo-button {
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.45);
     border: none;
     border-radius: 50%;
     color: #fff;
@@ -51,7 +52,7 @@
     font-size: 1.5rem;
     height: 44px;
     justify-content: center;
-    opacity: 0.8;
+    opacity: 0.9;
     padding: 0;
     position: absolute;
     top: 50%;
@@ -64,26 +65,32 @@
 }
 
 .prev-photo-button {
-    left: 1rem;
+    left: 12px;
 }
 
 .next-photo-button {
-    right: 1rem;
+    right: 12px;
 }
 
 .photo-button:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
     opacity: 1;
 }
 
 @media screen and (max-width: 828px) {
+    .image-carousel {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .carousel-images {
+        gap: 10px;
+    }
+
     .current-image {
         height: 250px;
         width: 250px;
-    }
-
-    .image-carousel {
-        margin-top: 0px;
     }
 
     .side-image {
@@ -91,7 +98,11 @@
         width: 180px;
     }
 
-    .carousel-images {
-        gap: 10px;
+    .prev-photo-button {
+        left: 8px;
+    }
+
+    .next-photo-button {
+        right: 8px;
     }
 }

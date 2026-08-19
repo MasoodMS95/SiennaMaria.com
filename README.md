@@ -138,7 +138,7 @@ The production API key is configured through the backend hosting environment.
 The frontend retrieves the latest YouTube video through the Express backend:
 
 ```http
-GET /api/latest
+GET /api/youtube/latest
 ```
 
 The backend communicates with the YouTube Data API and returns the latest video's ID and title.

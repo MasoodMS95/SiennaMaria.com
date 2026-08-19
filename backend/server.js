@@ -14,6 +14,7 @@ app.use(cors({
         "http://localhost:4173",
         "https://siennamaria.com",
         "https://www.siennamaria.com",
+        "https://siennamaria-com.onrender.com",
     ]
 }))
 

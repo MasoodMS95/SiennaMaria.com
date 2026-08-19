@@ -7,7 +7,7 @@ export default function Setup() {
         "Motherboard": "ASUS Z590-P",
         "Processor": "Intel i9 11900K",
         "GPU": "MSI Gaming Trio RTX 5080",
-        "Memory": "64GB 3200MHz Corsair Vengeance",
+        "Memory": "64GB Corsair Vengeance",
         "PSU": "Super Flower Leadex VII XG 1300W",
         "Case": "Hyte Y60"
     }

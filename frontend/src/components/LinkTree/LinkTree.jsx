@@ -1,7 +1,7 @@
 import './LinkTree.css'
 
 export default function LinkTree(){
-    const patreonURL = 'https://www.patreon.com/siennamaria';
+    const patreonURL = 'https://www.patreon.com/cw/SiennaMariia';
     const discordURL = 'https://discord.com/invite/a96kcFBukY'
     const youtubeURL = 'https://www.youtube.com/@siennamaria?sub_confirmation=1';
     const twitchURL = 'https://www.twitch.tv/siennamaria';

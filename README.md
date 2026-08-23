@@ -5,13 +5,12 @@ Personal website for Sienna Maria, built to provide a central location for her c
 ## Features
 
 - Responsive React frontend
-- Latest YouTube video automatically retrieved using the YouTube Data API
+- Latest YouTube video updated hourly through GitHub Actions
 - Social media link page
 - PC setup and hardware showcase
 - Image carousel
 - Responsive desktop and mobile layouts
-- Express backend for handling external API requests
-- Backend caching to reduce unnecessary YouTube API requests
+- Repository-backed last-known-good video data
 
 ## Tech Stack
 
@@ -21,13 +20,6 @@ Personal website for Sienna Maria, built to provide a central location for her c
 - Vite
 - React Router
 - CSS
-
-### Backend
-
-- Node.js
-- Express
-- CORS
-- dotenv
 
 ### External Services
 
@@ -39,15 +31,15 @@ Personal website for Sienna Maria, built to provide a central location for her c
 
 ```text
 SiennaMaria.com/
-├── backend/
-│   ├── api/
-│   ├── index.js
-│   └── package.json
-│
+├── .github/workflows/
+│   └── update-latest-video.yml
+├── scripts/
+│   └── updateLatestVideo.js
 ├── frontend/
 │   ├── public/
 │   ├── src/
 │   │   ├── assets/
+│   │   ├── data/
 │   │   └── components/
 │   ├── package.json
 │   └── vite.config.js
@@ -57,31 +49,11 @@ SiennaMaria.com/
 
 ## Running Locally
 
-Clone the repository and install the dependencies for both the frontend and backend.
-
-### Backend
-
-```bash
-cd backend
-npm install
-npm start
-```
-
-Create a `.env` file inside the backend directory:
-
-```env
-API_KEY=your_youtube_api_key
-```
-
-The backend runs locally on:
-
-```text
-http://localhost:3000
-```
+Clone the repository and install the frontend dependencies.
 
 ### Frontend
 
-Open another terminal:
+Run:
 
 ```bash
 cd frontend
@@ -95,75 +67,41 @@ The frontend development server will normally run on:
 http://localhost:5173
 ```
 
-Create the appropriate frontend environment configuration for the backend API URL if required.
-
 ## Production
 
 The application is deployed using Render.
 
-The React application is deployed as a static site, while the Express API runs as a separate web service.
+The React application is deployed as a static site. GitHub Actions checks the
+channel's uploads playlist once per hour using YouTube's low-cost
+`playlistItems.list` endpoint. A commit and Render deployment occur only when a
+different video is found.
 
 ```text
-Browser
-   │
-   ▼
-React / Vite Frontend
-   │
-   │ HTTPS API Request
-   ▼
-Express Backend
-   │
-   ▼
-YouTube Data API
+GitHub Actions → YouTube Data API → latestVideo.json → Render static frontend
 ```
 
 The production website is available at:
 
 **https://siennamaria.com**
 
-## Environment Variables
+## Latest YouTube Video
 
-The backend requires:
+The scheduled workflow runs `node scripts/updateLatestVideo.js` with the
+`YOUTUBE_API_KEY` GitHub Actions repository secret. The public uploads playlist
+ID is stored in the script. Valid results are written to
+`frontend/src/data/latestVideo.json`, which is durable last-known-good data.
 
-```env
-API_KEY=your_youtube_api_key
-```
-
-API keys and other secrets should never be committed to the repository.
-
-The production API key is configured through the backend hosting environment.
-
-## Latest Video API
-
-The frontend retrieves the latest YouTube video through the Express backend:
-
-```http
-GET /api/youtube/latest
-```
-
-The backend communicates with the YouTube Data API and returns the latest video's ID and title.
-
-Example response:
-
-```json
-{
-  "videoId": "VIDEO_ID",
-  "title": "Video Title"
-}
-```
-
-The result is cached by the backend to reduce unnecessary requests to the YouTube API.
+React imports that JSON at build time. If the JSON is ever invalid, the frontend
+retains the original hardcoded video ID as its final fallback. Failed YouTube
+requests never overwrite the stored JSON.
 
 ## Deployment
 
-The project uses separate Render services for the frontend and backend:
+The frontend is deployed as a Render static site:
 
 ```text
 Frontend:
 siennamaria.com
-
-Backend:
-siennamaria-backend.onrender.com
 ```
 
 The custom domain is registered through Namecheap and configured to point to the Render frontend.

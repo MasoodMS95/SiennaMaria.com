@@ -7,16 +7,16 @@ import pcFrieren2 from "../../../assets/images/pc_4.png";
 import pcFairy2 from "../../../assets/images/pc_5.png";
 import "./ImageCarousel.css";
 
+const images = [
+    { id: 1, image: pcFullImage },
+    { id: 2, image: pcFrieren1 },
+    { id: 3, image: pcFrieren2 },
+    { id: 4, image: pcFairy1 },
+    { id: 5, image: pcFairy2 },
+];
+
 export default function ImageCarousel() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    const images = [
-        { id: 1, image: pcFullImage },
-        { id: 2, image: pcFrieren1 },
-        { id: 3, image: pcFrieren2 },
-        { id: 4, image: pcFairy1 },
-        { id: 5, image: pcFairy2 },
-    ];
 
     const previousImageIndex =
         currentImageIndex === 0
@@ -43,7 +43,10 @@ export default function ImageCarousel() {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            handleNextClick();
+            setCurrentImageIndex(
+                (currentIndex) =>
+                    (currentIndex + 1) % images.length
+            );
         }, 10000);
 
         return () => clearTimeout(timer);

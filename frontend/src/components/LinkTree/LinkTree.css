@@ -22,6 +22,34 @@
     color: rgb(255, 0, 0); /* YouTube red */
 }
 
+.patreon-text {
+    color: rgb(0, 0, 0); /* Modern Patreon black */
+}
+
+.patreon-link-content {
+    align-items: center;
+    column-gap: 0.2em;
+    display: flex;
+    justify-content: center;
+}
+
+.patreon-icon {
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    display: inline-flex;
+    height: 1em;
+    justify-content: center;
+    flex: 0 0 auto;
+    line-height: 1;
+    width: 1em;
+}
+
+.patreon-icon .fa-patreon {
+    display: block;
+    font-size: 0.65em;
+}
+
 #youtube-you {
     color: rgb(255, 0, 0); /* YouTube red */
 }

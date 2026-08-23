@@ -1,6 +1,7 @@
 import './LinkTree.css'
 
 export default function LinkTree(){
+    const patreonURL = 'https://www.patreon.com/siennamaria';
     const discordURL = 'https://discord.com/invite/a96kcFBukY'
     const youtubeURL = 'https://www.youtube.com/@siennamaria?sub_confirmation=1';
     const twitchURL = 'https://www.twitch.tv/siennamaria';
@@ -15,6 +16,14 @@ export default function LinkTree(){
 
     return(
         <ul className='link-tree standard-font'>
+            <li className='socials-redirects' id='patreon-link' onClick={() => handleNavigate(patreonURL)}>
+                <div className='socials-link patreon-link-content'>
+                    <span className="patreon-icon">
+                        <i className="fa-brands fa-patreon"></i>
+                    </span>
+                    <span className='patreon-text'>Patreon</span>
+                </div>
+            </li>
             <li className='socials-redirects' id='discord-link' onClick={() => handleNavigate(discordURL)}>
                 <div className='socials-link'>
                     <i className="fa-brands fa-discord discord-text"></i>

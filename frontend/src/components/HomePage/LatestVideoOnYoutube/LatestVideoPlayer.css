@@ -4,13 +4,7 @@
 }
 
 .video-player{
-    width: 680px;
-    height: 383px;
-}
-
-@media screen and (max-width: 828px){
-    .video-player{
-        width: 340px;
-        height: 192px;
-    }
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
 }

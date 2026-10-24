@@ -11,7 +11,7 @@ export default function LinkTree(){
 
 
     const handleNavigate = (url) => {
-        window.open(url, '_blank');
+        window.open(url, '_blank', 'noopener,noreferrer');
     };
 
     return(
